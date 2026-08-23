@@ -1,0 +1,2126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mente en Equilibrio</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         SISTEMA DE CUENTAS
+    ====================================================== -->
+
+    <div id="authScreen" class="auth-screen">
+
+        <div class="auth-left">
+
+            <div class="login-brand">
+                🧠
+            </div>
+
+            <span class="mini-title">
+                BIENESTAR PERSONAL
+            </span>
+
+            <h1>
+                Mente en
+                <span>Equilibrio</span>
+            </h1>
+
+            <p>
+                Un espacio para aprender sobre bienestar,
+                reconocer tus emociones y desarrollar
+                hábitos saludables.
+            </p>
+
+
+            <!-- INICIAR SESIÓN -->
+
+            <div id="loginPanel">
+
+                <div class="auth-heading">
+
+                    <h2>
+                        Bienvenido de nuevo
+                    </h2>
+
+                    <p>
+                        Inicia sesión para continuar.
+                    </p>
+
+                </div>
+
+
+                <form id="loginForm">
+
+                    <label for="loginUser">
+                        Usuario o correo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="loginUser"
+                        placeholder="Escribe tu usuario o correo"
+                        autocomplete="username"
+                    >
+
+
+                    <label for="loginPassword">
+                        Contraseña
+                    </label>
+
+                    <div class="password-box">
+
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            placeholder="Escribe tu contraseña"
+                            autocomplete="current-password"
+                        >
+
+                        <button
+                            type="button"
+                            id="showLoginPassword"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="loginError"
+                        class="auth-message error"
+                    ></div>
+
+
+                    <button
+                        type="submit"
+                        class="btn-primary login-btn"
+                    >
+                        Iniciar sesión
+                        <span>→</span>
+                    </button>
+
+                </form>
+
+
+                <p class="auth-switch">
+                    ¿No tienes una cuenta?
+
+                    <button
+                        type="button"
+                        id="showRegister"
+                    >
+                        Crear una cuenta
+                    </button>
+                </p>
+
+            </div>
+
+
+            <!-- CREAR CUENTA -->
+
+            <div
+                id="registerPanel"
+                class="hidden"
+            >
+
+                <div class="auth-heading">
+
+                    <h2>
+                        Crea tu cuenta
+                    </h2>
+
+                    <p>
+                        Guarda tu progreso y tus actividades
+                        en este dispositivo.
+                    </p>
+
+                </div>
+
+
+                <form id="registerForm">
+
+                    <label for="registerName">
+                        Nombre
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerName"
+                        placeholder="Tu nombre"
+                    >
+
+
+                    <label for="registerUser">
+                        Usuario
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerUser"
+                        placeholder="Ej. alex123"
+                    >
+
+
+                    <label for="registerEmail">
+                        Correo electrónico
+                    </label>
+
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        placeholder="correo@ejemplo.com"
+                    >
+
+
+                    <label for="registerPassword">
+                        Contraseña
+                    </label>
+
+                    <div class="password-box">
+
+                        <input
+                            type="password"
+                            id="registerPassword"
+                            placeholder="Mínimo 6 caracteres"
+                        >
+
+                        <button
+                            type="button"
+                            id="showRegisterPassword"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+
+                    <label for="registerPassword2">
+                        Confirmar contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        id="registerPassword2"
+                        placeholder="Repite tu contraseña"
+                    >
+
+
+                    <div
+                        id="registerMessage"
+                        class="auth-message"
+                    ></div>
+
+
+                    <button
+                        type="submit"
+                        class="btn-primary login-btn"
+                    >
+                        Crear cuenta
+                        <span>→</span>
+                    </button>
+
+                </form>
+
+
+                <p class="auth-switch">
+
+                    ¿Ya tienes una cuenta?
+
+                    <button
+                        type="button"
+                        id="showLogin"
+                    >
+                        Iniciar sesión
+                    </button>
+
+                </p>
+
+            </div>
+
+
+            <small class="login-footer">
+                Tus datos se guardan únicamente en este dispositivo.
+            </small>
+
+        </div>
+
+
+        <div class="auth-right">
+
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+
+            <div class="login-phrase">
+
+                <span class="quote">
+                    “
+                </span>
+
+                <h2>
+                    Cuidar tu mente
+                    también es una forma
+                    de cuidarte.
+                </h2>
+
+                <p>
+                    Pequeños cambios pueden crear
+                    grandes diferencias.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         APLICACIÓN
+    ====================================================== -->
+
+    <div
+        id="app"
+        class="hidden"
+    >
+
+        <!-- NAVBAR -->
+
+        <header class="navbar">
+
+            <a
+                href="#"
+                class="logo"
+                data-page="inicio"
+            >
+
+                <div class="logo-icon">
+                    🧠
+                </div>
+
+                <div>
+
+                    <strong>
+                        Mente en
+                        <span>Equilibrio</span>
+                    </strong>
+
+                    <small>
+                        Bienestar personal
+                    </small>
+
+                </div>
+
+            </a>
+
+
+            <nav>
+
+                <button
+                    class="nav-link active"
+                    data-page="inicio"
+                >
+                    Inicio
+                </button>
+
+                <button
+                    class="nav-link"
+                    data-page="estres"
+                >
+                    Estrés
+                </button>
+
+                <button
+                    class="nav-link"
+                    data-page="descanso"
+                >
+                    Descanso
+                </button>
+
+                <button
+                    class="nav-link"
+                    data-page="tecnicas"
+                >
+                    Técnicas
+                </button>
+
+                <button
+                    class="nav-link"
+                    data-page="habitos"
+                >
+                    Hábitos
+                </button>
+
+                <button
+                    class="nav-link"
+                    data-page="diario"
+                >
+                    Mi diario
+                </button>
+
+            </nav>
+
+
+            <div class="user-area">
+
+                <button
+                    id="themeButton"
+                    class="theme-button"
+                >
+                    ☾
+                </button>
+
+
+                <div
+                    id="avatar"
+                    class="avatar"
+                >
+                    A
+                </div>
+
+
+                <span id="usuarioNombre">
+                    Usuario
+                </span>
+
+
+                <button
+                    id="logout"
+                    class="logout"
+                >
+                    Salir
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <main>
+
+
+            <!-- =================================================
+                 INICIO
+            ================================================== -->
+
+            <section
+                id="inicio"
+                class="page active"
+            >
+
+                <div class="hero">
+
+                    <div class="hero-content">
+
+                        <span class="mini-title">
+                            UN MOMENTO PARA TI
+                        </span>
+
+
+                        <h2>
+                            Tu mente merece
+                            <span>un momento de calma.</span>
+                        </h2>
+
+
+                        <p>
+                            Aprende a reconocer el estrés,
+                            mejorar tus hábitos y encontrar
+                            pequeños momentos de bienestar
+                            durante tu día.
+                        </p>
+
+
+                        <div class="hero-buttons">
+
+                            <button
+                                class="btn-primary"
+                                data-page="tecnicas"
+                            >
+                                Tomar una pausa →
+                            </button>
+
+
+                            <button
+                                class="btn-secondary"
+                                id="consejo"
+                            >
+                                ✨ Consejo
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="hero-visual">
+
+                        <div class="sun"></div>
+
+                        <div class="mountain mountain-back"></div>
+
+                        <div class="mountain mountain-front"></div>
+
+                        <div class="meditation">
+                            🧘
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CONSEJO -->
+
+                <div
+                    id="consejoBox"
+                    class="advice hidden"
+                >
+
+                    <div class="advice-icon">
+                        💡
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Consejo para ti
+                        </strong>
+
+                        <p id="textoConsejo"></p>
+
+                    </div>
+
+                    <button id="cerrarConsejo">
+                        ×
+                    </button>
+
+                </div>
+
+
+
+                <!-- PILARES INTERACTIVOS -->
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="mini-title">
+                            CONOCE TU BIENESTAR
+                        </span>
+
+                        <h3>
+                            Cuatro pilares para sentirte mejor
+                        </h3>
+
+                    </div>
+
+                    <p>
+                        Haz clic en una tarjeta para conocer
+                        más y realizar una actividad.
+                    </p>
+
+                </div>
+
+
+                <div class="pillar-grid">
+
+
+                    <article
+                        class="pillar pillar-green interactive-card"
+                        data-modal="mentalModal"
+                    >
+
+                        <div class="pillar-number">
+                            01
+                        </div>
+
+                        <div class="pillar-icon">
+                            🧠
+                        </div>
+
+                        <h4>
+                            Salud mental
+                        </h4>
+
+                        <p>
+                            Aprende a reconocer tus emociones
+                            y cuidar tus pensamientos.
+                        </p>
+
+                        <span class="card-action">
+                            Ver actividad →
+                        </span>
+
+                    </article>
+
+
+
+                    <article
+                        class="pillar pillar-blue interactive-card"
+                        data-modal="sleepModal"
+                    >
+
+                        <div class="pillar-number">
+                            02
+                        </div>
+
+                        <div class="pillar-icon">
+                            🌙
+                        </div>
+
+                        <h4>
+                            Descanso
+                        </h4>
+
+                        <p>
+                            Conoce hábitos que pueden ayudarte
+                            a construir una mejor rutina de sueño.
+                        </p>
+
+                        <span class="card-action">
+                            Ver actividad →
+                        </span>
+
+                    </article>
+
+
+
+                    <article
+                        class="pillar pillar-orange interactive-card"
+                        data-modal="relaxModal"
+                    >
+
+                        <div class="pillar-number">
+                            03
+                        </div>
+
+                        <div class="pillar-icon">
+                            🫁
+                        </div>
+
+                        <h4>
+                            Relajación
+                        </h4>
+
+                        <p>
+                            Prueba técnicas sencillas para
+                            hacer una pausa durante el día.
+                        </p>
+
+                        <span class="card-action">
+                            Ver actividad →
+                        </span>
+
+                    </article>
+
+
+
+                    <article
+                        class="pillar pillar-purple interactive-card"
+                        data-modal="habitModal"
+                    >
+
+                        <div class="pillar-number">
+                            04
+                        </div>
+
+                        <div class="pillar-icon">
+                            🌱
+                        </div>
+
+                        <h4>
+                            Hábitos
+                        </h4>
+
+                        <p>
+                            Crea pequeñas rutinas que favorezcan
+                            tu bienestar diario.
+                        </p>
+
+                        <span class="card-action">
+                            Ver actividad →
+                        </span>
+
+                    </article>
+
+                </div>
+
+
+
+                <!-- CHECK IN -->
+
+                <div class="check-section">
+
+                    <div>
+
+                        <span class="mini-title">
+                            CHECK-IN
+                        </span>
+
+                        <h3>
+                            ¿Cómo te sientes hoy?
+                        </h3>
+
+                        <p>
+                            Selecciona una opción y recibe
+                            una pequeña recomendación.
+                        </p>
+
+                    </div>
+
+
+                    <div class="moods">
+
+                        <button data-mood="feliz">
+                            😄
+                            <span>Bien</span>
+                        </button>
+
+                        <button data-mood="tranquilo">
+                            😌
+                            <span>Tranquilo</span>
+                        </button>
+
+                        <button data-mood="cansado">
+                            😴
+                            <span>Cansado</span>
+                        </button>
+
+                        <button data-mood="estresado">
+                            😣
+                            <span>Estresado</span>
+                        </button>
+
+                        <button data-mood="preocupado">
+                            😟
+                            <span>Preocupado</span>
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="moodResult"
+                        class="mood-result"
+                    ></div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ESTRES
+            ================================================== -->
+
+            <section
+                id="estres"
+                class="page"
+            >
+
+                <div class="page-banner stress-banner">
+
+                    <div>
+
+                        <span class="mini-title">
+                            01 · COMPRENDER
+                        </span>
+
+                        <h2>
+                            Entender el
+                            <span>estrés.</span>
+                        </h2>
+
+                        <p>
+                            El estrés es una respuesta natural
+                            de nuestro cuerpo ante situaciones
+                            que percibimos como exigentes.
+                        </p>
+
+                    </div>
+
+                    <div class="big-emoji">
+                        🌿
+                    </div>
+
+                </div>
+
+
+                <div class="info-title">
+
+                    <span class="mini-title">
+                        INFORMACIÓN
+                    </span>
+
+                    <h3>
+                        Conoce lo que ocurre contigo
+                    </h3>
+
+                </div>
+
+
+                <div class="info-grid">
+
+                    <article class="info-card">
+
+                        <span>
+                            01
+                        </span>
+
+                        <h4>
+                            ¿Qué puede provocarlo?
+                        </h4>
+
+                        <p>
+                            Problemas escolares o laborales,
+                            cambios importantes, preocupaciones,
+                            falta de descanso o demasiadas
+                            responsabilidades.
+                        </p>
+
+                    </article>
+
+
+                    <article class="info-card">
+
+                        <span>
+                            02
+                        </span>
+
+                        <h4>
+                            Señales comunes
+                        </h4>
+
+                        <p>
+                            Cansancio, irritabilidad, dificultad
+                            para concentrarse, tensión muscular,
+                            inquietud o sensación de estar
+                            sobrepasado.
+                        </p>
+
+                    </article>
+
+
+                    <article class="info-card">
+
+                        <span>
+                            03
+                        </span>
+
+                        <h4>
+                            ¿Qué puedes hacer?
+                        </h4>
+
+                        <p>
+                            Haz pausas, organiza tus pendientes,
+                            descansa, muévete un poco y habla
+                            con alguien de confianza.
+                        </p>
+
+                    </article>
+
+                </div>
+
+
+                <!-- ACTIVIDAD DE ESTRES -->
+
+                <div class="activity-box">
+
+                    <span class="mini-title">
+                        ACTIVIDAD
+                    </span>
+
+                    <h3>
+                        Identifica cómo está tu estrés
+                    </h3>
+
+                    <p>
+                        Selecciona las señales que hayas sentido
+                        recientemente.
+                    </p>
+
+
+                    <div class="signal-grid">
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                class="stress-signal"
+                            >
+                            Cansancio
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                class="stress-signal"
+                            >
+                            Irritabilidad
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                class="stress-signal"
+                            >
+                            Dificultad para concentrarme
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                class="stress-signal"
+                            >
+                            Tensión
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                class="stress-signal"
+                            >
+                            Preocupación
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                class="stress-signal"
+                            >
+                            Inquietud
+                        </label>
+
+                    </div>
+
+
+                    <button
+                        id="analizarStress"
+                        class="btn-primary"
+                    >
+                        Analizar señales
+                    </button>
+
+
+                    <div
+                        id="stressResult"
+                        class="activity-result"
+                    ></div>
+
+                </div>
+
+
+                <div class="steps-box">
+
+                    <div class="steps-title">
+
+                        <span class="mini-title">
+                            CUANDO TE SIENTAS SOBREPASADO
+                        </span>
+
+                        <h3>
+                            Haz una pausa de cinco pasos
+                        </h3>
+
+                    </div>
+
+
+                    <div class="steps">
+
+                        <div>
+                            <b>01</b>
+                            <span>Detente</span>
+                        </div>
+
+                        <div>
+                            <b>02</b>
+                            <span>Respira</span>
+                        </div>
+
+                        <div>
+                            <b>03</b>
+                            <span>Identifica</span>
+                        </div>
+
+                        <div>
+                            <b>04</b>
+                            <span>Prioriza</span>
+                        </div>
+
+                        <div>
+                            <b>05</b>
+                            <span>Actúa</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dark-box">
+
+                    <span class="mini-title">
+                        RECUERDA
+                    </span>
+
+                    <h3>
+                        No tienes que resolver todo al mismo tiempo.
+                    </h3>
+
+                    <p>
+                        Dividir una situación en pasos pequeños
+                        puede hacer que parezca más manejable.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 DESCANSO
+            ================================================== -->
+
+            <section
+                id="descanso"
+                class="page"
+            >
+
+                <div class="page-banner sleep-banner">
+
+                    <div>
+
+                        <span class="mini-title">
+                            02 · RECARGA
+                        </span>
+
+                        <h2>
+                            Tu descanso
+                            <span>importa.</span>
+                        </h2>
+
+                        <p>
+                            Dormir y descansar permite que el
+                            cuerpo y la mente recuperen energía
+                            para el día siguiente.
+                        </p>
+
+                    </div>
+
+                    <div class="big-emoji">
+                        🌙
+                    </div>
+
+                </div>
+
+
+                <div class="sleep-calculator">
+
+                    <div>
+
+                        <span class="mini-title">
+                            HERRAMIENTA
+                        </span>
+
+                        <h3>
+                            ¿Cuánto duermes?
+                        </h3>
+
+                        <p>
+                            Introduce aproximadamente cuántas
+                            horas duermes por noche.
+                        </p>
+
+
+                        <div class="sleep-input">
+
+                            <input
+                                type="number"
+                                id="horasSueno"
+                                min="0"
+                                max="24"
+                                step="0.5"
+                                placeholder="7.5"
+                            >
+
+                            <span>
+                                horas
+                            </span>
+
+                            <button
+                                id="analizarSueno"
+                                class="btn-primary"
+                            >
+                                Analizar
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            id="resultadoSueno"
+                            class="sleep-result"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="moon">
+                        🌙
+                    </div>
+
+                </div>
+
+
+                <div class="section-header compact">
+
+                    <div>
+
+                        <span class="mini-title">
+                            HIGIENE DEL SUEÑO
+                        </span>
+
+                        <h3>
+                            Prepara tu cuerpo para descansar
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sleep-tips">
+
+                    <article>
+                        <span>📵</span>
+
+                        <h4>
+                            Reduce pantallas
+                        </h4>
+
+                        <p>
+                            Intenta desconectarte un rato
+                            antes de dormir.
+                        </p>
+                    </article>
+
+
+                    <article>
+                        <span>☕</span>
+
+                        <h4>
+                            Cuida la cafeína
+                        </h4>
+
+                        <p>
+                            Evita consumir bebidas con cafeína
+                            cerca de la hora de dormir.
+                        </p>
+                    </article>
+
+
+                    <article>
+                        <span>⏰</span>
+
+                        <h4>
+                            Mantén horarios
+                        </h4>
+
+                        <p>
+                            Una rutina constante puede facilitar
+                            el descanso.
+                        </p>
+                    </article>
+
+
+                    <article>
+                        <span>🌑</span>
+
+                        <h4>
+                            Ambiente tranquilo
+                        </h4>
+
+                        <p>
+                            Procura un espacio cómodo, oscuro
+                            y con poco ruido.
+                        </p>
+                    </article>
+
+                </div>
+
+
+                <!-- RUTINA NOCTURNA -->
+
+                <div class="activity-box">
+
+                    <span class="mini-title">
+                        ACTIVIDAD
+                    </span>
+
+                    <h3>
+                        Prepara tu rutina nocturna
+                    </h3>
+
+                    <p>
+                        Marca las acciones que realizaste
+                        antes de dormir.
+                    </p>
+
+
+                    <div class="night-checks">
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                class="night-item"
+                            >
+                            Dejé el teléfono un rato
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                class="night-item"
+                            >
+                            Preparé mi habitación
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                class="night-item"
+                            >
+                            Me relajé antes de dormir
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                class="night-item"
+                            >
+                            Intenté mantener un horario
+                        </label>
+
+                    </div>
+
+
+                    <div
+                        id="nightResult"
+                        class="activity-result"
+                    ></div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 TECNICAS
+            ================================================== -->
+
+            <section
+                id="tecnicas"
+                class="page"
+            >
+
+                <div class="page-banner technique-banner">
+
+                    <div>
+
+                        <span class="mini-title">
+                            03 · TOMA UNA PAUSA
+                        </span>
+
+                        <h2>
+                            Respira.
+                            <span>Desacelera.</span>
+                        </h2>
+
+                        <p>
+                            Dedicar unos minutos a respirar
+                            lentamente puede ayudarte a hacer
+                            una pausa y concentrarte en el presente.
+                        </p>
+
+                    </div>
+
+                    <div class="big-emoji">
+                        🫁
+                    </div>
+
+                </div>
+
+
+                <div class="breathing">
+
+                    <div class="breathing-info">
+
+                        <span class="mini-title">
+                            EJERCICIO GUIADO
+                        </span>
+
+                        <h3>
+                            Respiración 4 · 4
+                        </h3>
+
+                        <p>
+                            Inhala durante 4 segundos y después
+                            exhala durante 4 segundos.
+                            Sigue el círculo y concéntrate
+                            en tu respiración.
+                        </p>
+
+                        <button
+                            id="iniciarRespiracion"
+                            class="btn-primary"
+                        >
+                            Comenzar
+                        </button>
+
+                        <button
+                            id="detenerRespiracion"
+                            class="btn-text hidden"
+                        >
+                            Detener ejercicio
+                        </button>
+
+                    </div>
+
+
+                    <div class="breathing-circle-area">
+
+                        <div
+                            id="circuloRespiracion"
+                            class="breathing-circle"
+                        >
+
+                            <strong id="faseRespiracion">
+                                LISTO
+                            </strong>
+
+                            <small id="contadorRespiracion">
+                                4
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="grounding">
+
+                    <div class="grounding-header">
+
+                        <span class="mini-title">
+                            TÉCNICA DE CONCENTRACIÓN
+                        </span>
+
+                        <h3>
+                            5 · 4 · 3 · 2 · 1
+                        </h3>
+
+                        <p>
+                            Una actividad para dirigir tu atención
+                            hacia lo que puedes percibir a tu alrededor.
+                        </p>
+
+                    </div>
+
+
+                    <div class="grounding-items">
+
+                        <button data-ground="5">
+                            <b>5</b>
+                            cosas que puedes ver
+                        </button>
+
+                        <button data-ground="4">
+                            <b>4</b>
+                            cosas que puedes tocar
+                        </button>
+
+                        <button data-ground="3">
+                            <b>3</b>
+                            cosas que puedes escuchar
+                        </button>
+
+                        <button data-ground="2">
+                            <b>2</b>
+                            cosas que puedes oler
+                        </button>
+
+                        <button data-ground="1">
+                            <b>1</b>
+                            cosa que puedes saborear
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="groundResult"
+                        class="ground-result"
+                    >
+                        Selecciona un paso para comenzar.
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 HABITOS
+            ================================================== -->
+
+            <section
+                id="habitos"
+                class="page"
+            >
+
+                <div class="page-banner habits-banner">
+
+                    <div>
+
+                        <span class="mini-title">
+                            04 · CONSTANCIA
+                        </span>
+
+                        <h2>
+                            Hábitos que
+                            <span>suman.</span>
+                        </h2>
+
+                        <p>
+                            El bienestar también se construye
+                            con pequeñas acciones repetidas.
+                            No se trata de hacerlo perfecto,
+                            sino de empezar.
+                        </p>
+
+                    </div>
+
+                    <div class="big-emoji">
+                        🌱
+                    </div>
+
+                </div>
+
+
+                <div class="habit-grid">
+
+                    <article class="habit-card">
+                        <span>💧</span>
+
+                        <div>
+                            <h4>Hidratación</h4>
+
+                            <p>
+                                Toma agua durante el día
+                                y presta atención a las señales de sed.
+                            </p>
+                        </div>
+                    </article>
+
+
+                    <article class="habit-card">
+                        <span>🥗</span>
+
+                        <div>
+                            <h4>Alimentación</h4>
+
+                            <p>
+                                Busca una alimentación variada
+                                y suficiente para tus necesidades.
+                            </p>
+                        </div>
+                    </article>
+
+
+                    <article class="habit-card">
+                        <span>🏃</span>
+
+                        <div>
+                            <h4>Movimiento</h4>
+
+                            <p>
+                                Encuentra una actividad física
+                                que disfrutes y puedas mantener.
+                            </p>
+                        </div>
+                    </article>
+
+
+                    <article class="habit-card">
+                        <span>🤝</span>
+
+                        <div>
+                            <h4>Conexión</h4>
+
+                            <p>
+                                Mantén contacto con personas
+                                importantes para ti.
+                            </p>
+                        </div>
+                    </article>
+
+
+                    <article class="habit-card">
+                        <span>📵</span>
+
+                        <div>
+                            <h4>Desconexión digital</h4>
+
+                            <p>
+                                Reserva momentos sin notificaciones
+                                para descansar de la información.
+                            </p>
+                        </div>
+                    </article>
+
+
+                    <article class="habit-card">
+                        <span>📋</span>
+
+                        <div>
+                            <h4>Organización</h4>
+
+                            <p>
+                                Divide tareas grandes en pasos
+                                pequeños y realistas.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+
+                <!-- SEGUIMIENTO DIARIO -->
+
+                <div class="daily-habits">
+
+                    <div class="daily-title">
+
+                        <div>
+
+                            <span class="mini-title">
+                                MI DÍA
+                            </span>
+
+                            <h3>
+                                Pequeñas acciones
+                            </h3>
+
+                        </div>
+
+                        <strong id="habitProgress">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress">
+
+                        <div
+                            id="progressBar"
+                            class="progress-bar"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="habit-checks">
+
+                        <label>
+                            <input type="checkbox">
+                            <span>Tomé suficiente agua</span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            <span>Hice una pausa</span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            <span>Me moví durante el día</span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            <span>Tuve un momento sin pantallas</span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            <span>Me preparé para descansar</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="challenge">
+
+                    <div class="challenge-icon">
+                        ✨
+                    </div>
+
+                    <div>
+
+                        <span class="mini-title">
+                            RETO DEL DÍA
+                        </span>
+
+                        <h3 id="reto">
+                            Haz una pausa de 5 minutos
+                            y respira con calma.
+                        </h3>
+
+                    </div>
+
+                    <button
+                        id="nuevoReto"
+                        class="btn-secondary"
+                    >
+                        Otro reto
+                    </button>
+
+                </div>
+
+
+                <div class="disclaimer">
+
+                    <strong>
+                        Nota importante:
+                    </strong>
+
+                    Esta página ofrece información general
+                    sobre bienestar y no sustituye la atención
+                    de profesionales de la salud.
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 MI DIARIO
+            ================================================== -->
+
+            <section
+                id="diario"
+                class="page"
+            >
+
+                <div class="page-banner diary-banner">
+
+                    <div>
+
+                        <span class="mini-title">
+                            05 · CONÓCETE
+                        </span>
+
+                        <h2>
+                            Mi
+                            <span>diario.</span>
+                        </h2>
+
+                        <p>
+                            Escribe cómo te sientes, qué ocurrió
+                            durante tu día o cualquier pensamiento
+                            que quieras guardar.
+                        </p>
+
+                    </div>
+
+                    <div class="big-emoji">
+                        📖
+                    </div>
+
+                </div>
+
+
+                <div class="diary-box">
+
+                    <div class="diary-header">
+
+                        <div>
+
+                            <span class="mini-title">
+                                REFLEXIÓN PERSONAL
+                            </span>
+
+                            <h3>
+                                ¿Cómo fue tu día?
+                            </h3>
+
+                        </div>
+
+                        <span id="diaryDate"></span>
+
+                    </div>
+
+
+                    <textarea
+                        id="diaryText"
+                        placeholder="Escribe aquí lo que quieras recordar de hoy..."
+                    ></textarea>
+
+
+                    <div class="diary-actions">
+
+                        <button
+                            id="saveDiary"
+                            class="btn-primary"
+                        >
+                            Guardar reflexión
+                        </button>
+
+                        <button
+                            id="clearDiary"
+                            class="btn-secondary"
+                        >
+                            Limpiar
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="diaryMessage"
+                        class="activity-result"
+                    ></div>
+
+                </div>
+
+
+                <div class="reflection-prompts">
+
+                    <span class="mini-title">
+                        IDEAS PARA ESCRIBIR
+                    </span>
+
+                    <h3>
+                        Si no sabes qué escribir...
+                    </h3>
+
+
+                    <div class="prompt-grid">
+
+                        <button data-prompt="Hoy me sentí...">
+                            💭 Hoy me sentí...
+                        </button>
+
+                        <button data-prompt="Algo que me hizo feliz fue...">
+                            😊 Algo que me hizo feliz fue...
+                        </button>
+
+                        <button data-prompt="Algo que me preocupó fue...">
+                            🧠 Algo que me preocupó fue...
+                        </button>
+
+                        <button data-prompt="Mañana quiero...">
+                            🌱 Mañana quiero...
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="personal-progress">
+
+                    <div>
+
+                        <span class="mini-title">
+                            MI PROGRESO
+                        </span>
+
+                        <h3>
+                            Sigue construyendo pequeños cambios.
+                        </h3>
+
+                        <p>
+                            Cada actividad completada representa
+                            un pequeño paso.
+                        </p>
+
+                    </div>
+
+
+                    <div class="progress-stats">
+
+                        <div>
+
+                            <strong id="statHabits">
+                                0%
+                            </strong>
+
+                            <span>
+                                Hábitos
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong id="statActivities">
+                                0
+                            </strong>
+
+                            <span>
+                                Actividades
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong id="statReflections">
+                                0
+                            </strong>
+
+                            <span>
+                                Reflexiones
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+
+        <!-- =================================================
+             MODALES
+        ================================================== -->
+
+        <!-- SALUD MENTAL -->
+
+        <div
+            id="mentalModal"
+            class="modal-overlay hidden"
+        >
+
+            <div class="modal-card">
+
+                <button
+                    class="modal-close"
+                    data-close-modal
+                >
+                    ×
+                </button>
+
+                <div class="modal-icon">
+                    🧠
+                </div>
+
+                <span class="mini-title">
+                    SALUD MENTAL
+                </span>
+
+                <h2>
+                    Conoce cómo te sientes
+                </h2>
+
+                <p>
+                    Reconocer nuestras emociones puede ayudarnos
+                    a entender mejor lo que necesitamos.
+                </p>
+
+
+                <div class="modal-activity">
+
+                    <h4>
+                        ✍️ Actividad
+                    </h4>
+
+                    <p>
+                        Completa la frase:
+                        <strong>“En este momento me siento...”</strong>
+                    </p>
+
+                    <input
+                        type="text"
+                        id="mentalReflection"
+                        placeholder="Escribe una palabra o frase..."
+                    >
+
+                    <button
+                        id="saveMental"
+                        class="btn-primary"
+                    >
+                        Guardar actividad
+                    </button>
+
+                    <div
+                        id="mentalResult"
+                        class="activity-result"
+                    ></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- DESCANSO -->
+
+        <div
+            id="sleepModal"
+            class="modal-overlay hidden"
+        >
+
+            <div class="modal-card">
+
+                <button
+                    class="modal-close"
+                    data-close-modal
+                >
+                    ×
+                </button>
+
+                <div class="modal-icon">
+                    🌙
+                </div>
+
+                <span class="mini-title">
+                    DESCANSO
+                </span>
+
+                <h2>
+                    Prepara una mejor noche
+                </h2>
+
+                <p>
+                    Una rutina sencilla puede ayudarte a
+                    preparar tu mente para descansar.
+                </p>
+
+
+                <div class="modal-activity">
+
+                    <h4>
+                        🌙 Mini rutina
+                    </h4>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            class="modal-sleep-check"
+                        >
+                        Alejarme de las pantallas
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            class="modal-sleep-check"
+                        >
+                        Preparar mi espacio
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            class="modal-sleep-check"
+                        >
+                        Respirar y relajarme
+                    </label>
+
+                    <button
+                        id="completeSleepActivity"
+                        class="btn-primary"
+                    >
+                        Completar
+                    </button>
+
+                    <div
+                        id="sleepActivityResult"
+                        class="activity-result"
+                    ></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RELAJACIÓN -->
+
+        <div
+            id="relaxModal"
+            class="modal-overlay hidden"
+        >
+
+            <div class="modal-card">
+
+                <button
+                    class="modal-close"
+                    data-close-modal
+                >
+                    ×
+                </button>
+
+                <div class="modal-icon">
+                    🫁
+                </div>
+
+                <span class="mini-title">
+                    RELAJACIÓN
+                </span>
+
+                <h2>
+                    Tómate un minuto
+                </h2>
+
+                <p>
+                    Elige una actividad para hacer una pequeña
+                    pausa durante tu día.
+                </p>
+
+
+                <div class="relax-options">
+
+                    <button data-page="tecnicas">
+                        🌬️ Respiración 4 · 4
+                    </button>
+
+                    <button data-ground="5">
+                        🎯 Técnica 5 · 4 · 3 · 2 · 1
+                    </button>
+
+                    <button id="oneMinuteRelax">
+                        🧘 Pausa de un minuto
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="relaxResult"
+                    class="activity-result"
+                ></div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- HABITOS -->
+
+        <div
+            id="habitModal"
+            class="modal-overlay hidden"
+        >
+
+            <div class="modal-card">
+
+                <button
+                    class="modal-close"
+                    data-close-modal
+                >
+                    ×
+                </button>
+
+                <div class="modal-icon">
+                    🌱
+                </div>
+
+                <span class="mini-title">
+                    HÁBITOS
+                </span>
+
+                <h2>
+                    Construye un pequeño hábito
+                </h2>
+
+                <p>
+                    Selecciona una acción sencilla que quieras
+                    intentar realizar hoy.
+                </p>
+
+
+                <div class="habit-choice">
+
+                    <button data-habit-choice="Beber más agua">
+                        💧 Beber más agua
+                    </button>
+
+                    <button data-habit-choice="Caminar unos minutos">
+                        🏃 Caminar unos minutos
+                    </button>
+
+                    <button data-habit-choice="Hacer una pausa">
+                        🧘 Hacer una pausa
+                    </button>
+
+                    <button data-habit-choice="Dormir más temprano">
+                        🌙 Dormir más temprano
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="habitChoiceResult"
+                    class="activity-result"
+                ></div>
+
+            </div>
+
+        </div>
+
+
+
+        <footer>
+
+            <span>
+                🧠 Mente en Equilibrio
+            </span>
+
+            <span>
+                Cuidar tu mente también es cuidarte.
+            </span>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
